@@ -60,7 +60,7 @@ void NLDrawPieChartProgressGraph(CGContextRef context, CGPoint center, CGFloat r
 	CGContextSetBlendMode(context, kCGBlendModeClear);;
 	
 	//Erase a circle smaller than the last one to 'punch out' a hole using a magic number of 1.5 times the radius as the size of the erased circle.
-	CGFloat innerRadius = radius * 1.5;
+	CGFloat innerRadius = radius * 1.65;
 	CGPoint newCenterPoint = CGPointMake(centerPoint.x - innerRadius /2, centerPoint.y - innerRadius/2); //Center it based on the last circle
 	
 	CGContextAddEllipseInRect(context, CGRectMake(newCenterPoint.x, newCenterPoint.y, innerRadius, innerRadius));
